@@ -35,11 +35,11 @@ pipeline {
         }
       }
     }
-    post {
+  }
+  post {
         success {
             echo "Docker image built successfully: ${DOCKER_IMAGE_NAME}"
             echo "Docker container running: ${DOCKER_CONTAINER_NAME}"
         }
     }
-  }
 }
