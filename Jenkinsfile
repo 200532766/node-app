@@ -18,11 +18,10 @@ pipeline {
       steps {
         script {
           // Build the Docker image from the specified Dockerfile
-          docker.build("-f ${DOCKERFILE_PATH} -t ${DOCKER_IMAGE_NAME} .")
+          sh "docker.build("-f ${DOCKERFILE_PATH} -t ${DOCKER_IMAGE_NAME} .")"
         }
       }
     }
-
     stage('Run Docker Container') {
       steps {
         script {
