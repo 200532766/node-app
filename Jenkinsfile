@@ -4,8 +4,6 @@ pipeline {
   environment {
         DOCKER_IMAGE_NAME = 'simple-node-app'
         DOCKER_CONTAINER_NAME = 'express-params-example'
-        NODEJS_HOME = ''
-        DOCKERFILE_PATH = '/'  // Dockerfile is in the root directory
   }
 
   stages {
@@ -18,7 +16,7 @@ pipeline {
       steps {
         script {
           // Build the Docker image from the specified Dockerfile
-          sh "docker build -f ${DOCKERFILE_PATH} -t ${DOCKER_IMAGE_NAME} ."
+          sh "docker build -t ${DOCKER_IMAGE_NAME} ."
         }
       }
     }
