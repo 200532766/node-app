@@ -1,13 +1,13 @@
 {
   "name": "app",
   "version": "1.0.0",
-  "description": "",
+  "description": "Simple Node.js App deploying using Jenkins and Docker",
   "main": "index.js",
   "scripts": {
     "start": "node ./src/index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Kiran-Machineni",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.2",
